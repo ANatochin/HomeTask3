@@ -103,9 +103,11 @@ $firstArr1 = [
 foreach ($firstArr1 as $value){
     if (is_array($value)){
         $internalKeys = array_keys($value);
-        echo '<pre>';
-        var_dump($value[$internalKeys[1]]);
-        echo '</pre>';
+        if (array_key_exists(2, $internalKeys)){
+            echo '<pre>';
+            var_dump($value[$internalKeys[1]]);
+            echo '</pre>';
+        }
     }
 }
 
